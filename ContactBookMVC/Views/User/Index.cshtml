@@ -1,0 +1,15 @@
+﻿@model ContactBookMVC.Models.User
+<h1>User</h1>
+<p>@Model.Username</p>
+
+<a asp-controller="User" 
+    asp-action="Details"
+    asp-route-id="5">
+
+    Przejdź do szczegółów 5
+
+</a>
+@if (TempData["msg"] != null)
+{
+    <p style="color: green">@TempData["msg"]</p>
+}
